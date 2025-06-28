@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Manrope } from "next/font/google";
+import { Judson } from "next/font/google";
 import "./globals.css";
 
-const manrope = Manrope({
-  subsets: ["latin"],
+const judson = Judson({
+  weight: '400',
+  subsets: ["latin"]
 });
 
 
@@ -20,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${manrope.className} antialiased`}
+        className={`${judson.className} antialiased`}
       >
         {children}
       </body>
