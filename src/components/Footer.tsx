@@ -5,7 +5,7 @@ import { MdOutlineEmail } from "react-icons/md";
 
 const Footer = () => {
   return (
-    <div className='p-4 w-full flex flex-row items-center justify-around'>
+    <div className='p-1 w-full flex flex-col items-center justify-around gap-4 md:p-4 md:flex-row md:gap-0'>
         <div>
             <p className='text-white text-md'>&copy;2025 Rajpreet Singh. All Rights reserverd.</p>
         </div>
