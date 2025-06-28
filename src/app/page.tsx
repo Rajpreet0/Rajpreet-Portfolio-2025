@@ -1,3 +1,4 @@
+import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import LandingPage from "@/components/LandingPage";
 import ProfilePage from "@/components/ProfilePage";
@@ -10,6 +11,7 @@ export default function Home() {
         <LandingPage />
         <ProfilePage />
         <TimelinePage />
+        <ContactSection/>
       </div>
       <Footer />
     </div>
