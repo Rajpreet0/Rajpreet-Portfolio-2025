@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Judson } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "@/components/ui/sonner";
 
 const judson = Judson({
   weight: '400',
@@ -23,7 +24,9 @@ export default function RootLayout({
       <body
         className={`${judson.className} antialiased`}
       >
-        {children}
+        <main>{children}</main>
+        <Toaster
+          richColors />
       </body>
     </html>
   );
