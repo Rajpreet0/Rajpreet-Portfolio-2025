@@ -1,7 +1,11 @@
 import SplitText from "./blocks/TextAnimations/SplitText/SplitText"
 import { SlMouse } from "react-icons/sl";
 
-const LandingPage = () => {
+interface LandingPageProps {
+  scrollToProfile: () => void;
+}
+
+const LandingPage: React.FC<LandingPageProps> = ({scrollToProfile}) => {
   return (
     <div className="h-screen flex flex-col justify-between items-center relative">
       <div className="flex flex-col items-center justify-center flex-grow">
@@ -33,7 +37,9 @@ const LandingPage = () => {
         />
       </div>
       <div className="mb-12">
-        <SlMouse className="text-white w-8 h-8 cursor-pointer hover:scale-125 transition-all" />
+        <SlMouse
+          onClick={scrollToProfile} 
+          className="text-white w-8 h-8 cursor-pointer hover:scale-125 transition-all" />
       </div>
     </div>
   )
