@@ -6,7 +6,7 @@ const LandingPage = () => {
     <div className="h-screen flex flex-col justify-between items-center relative">
       <div className="flex flex-col items-center justify-center flex-grow">
         <SplitText
-          text="Hallo"
+          text="Hello"
           className="text-[120px] text-white font-semibold text-center"
           delay={100}
           duration={0.6}
