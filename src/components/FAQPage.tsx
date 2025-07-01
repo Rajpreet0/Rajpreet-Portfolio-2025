@@ -34,7 +34,7 @@ const FAQPage = () => {
             <AccordionTrigger>02. How much does it cost for a high-performing website?</AccordionTrigger>
             <AccordionContent className='flex flex-col gap-4 text-balance text-gray-300'>
               <p>
-               It depends on your project's scope and needs. If you're interested in a performant, well-designed website, give me a call, and we can discuss a fair, transparent budget for your specific case.
+               It depends on your project&apos;s scope and needs. If you&apos;re interested in a performant, well-designed website, give me a call, and we can discuss a fair, transparent budget for your specific case.
               </p>
             </AccordionContent>
           </AccordionItem>
