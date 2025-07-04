@@ -6,12 +6,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React  from 'react'
 
-interface DetailProjectPageProps {
-  params: { slug: string }
-}
-
-
-const DetailProjectPage =  async ({ params }: DetailProjectPageProps) => {
+const DetailProjectPage =  async ({ params }: { params: { slug: string } }) => {
 
   const { slug } =  params;
   const detailProjects = await getDetailedProjectQuery(slug);
