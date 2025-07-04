@@ -192,10 +192,19 @@ export type AllProjectsQueryResult = Array<{
   category: "design" | "developementAndDesign" | "development" | null;
 }>;
 
+// Source: ./src/sanity/lib/imagePreview/getImagePreviews.ts
+// Variable: imagePreviewQuery
+// Query: *[_type == "projcets"] | order(projectPublished desc)[0...2] {  _id,  "coverImageUrl": coverImage.asset->url,}
+export type ImagePreviewQueryResult = Array<{
+  _id: string;
+  coverImageUrl: string | null;
+}>;
+
 // Query TypeMap
 import "@sanity/client";
 declare module "@sanity/client" {
   interface SanityQueries {
     "*[_type == \"projcets\"] | order(projectPublished desc) {\n  _id,\n  title,\n  \"slug\": slug.current,\n  projectPublished,\n  \"coverImageUrl\": coverImage.asset->url,\n  category,\n}": AllProjectsQueryResult;
+    "*[_type == \"projcets\"] | order(projectPublished desc)[0...2] {\n  _id,\n  \"coverImageUrl\": coverImage.asset->url,\n}": ImagePreviewQueryResult;
   }
 }

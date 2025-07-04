@@ -76,7 +76,8 @@ export default defineType({
             type: 'array',
             of: [{ type: 'block' }],
             validation: (rule) => rule.required()
-        })
+        }),
+
     ]
 })
 
